@@ -1,0 +1,110 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.UI\\ST2Project.UI.csproj": {}
+  },
+  "projects": {
+    "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.Logic\\ST2Project.Logic.csproj": {
+      "restore": {
+        "projectUniqueName": "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.Logic\\ST2Project.Logic.csproj",
+        "projectName": "ST2Project.Logic",
+        "projectPath": "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.Logic\\ST2Project.Logic.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.UI\\ST2Project.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.UI\\ST2Project.UI.csproj",
+        "projectName": "ST2Project.UI",
+        "projectPath": "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.UI\\ST2Project.UI.csproj",
+        "packagesPath": "C:\\Users\\kubat\\.nuget\\packages\\",
+        "outputPath": "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kubat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.Logic\\ST2Project.Logic.csproj": {
+                "projectPath": "F:\\SzkolenieTechniczne2\\Projekt\\ST2Project\\ST2Project.Logic\\ST2Project.Logic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[27.2.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.0.3, )"
+            },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

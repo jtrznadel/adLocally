@@ -1,0 +1,58 @@
+﻿@model ST2Project.UI.Models.OfferModel
+
+@{
+    ViewData["Title"] = "CreateOffer";
+}
+
+<center><h1>Create your own Offer</h1></center>
+<hr />
+<div class = "limgage" style="width: 40%; float:left; padding-top: 5%; padding-left:10%">
+    <img src="~/images/register_image.svg" />
+</div>
+<div class = "pform" style="width:60%;height: 100%; float:right; align-items:center">
+    <div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddOffer" style="margin-top:100px">
+            <p style="color:red; font-size:24px; width: 100%">@TempData["Alert"]</p>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Condition" class="control-label"></label>
+                <select class="form-control" asp-for="Condition" asp-items="@Model.Conditions"></select>
+                <span asp-validation-for="Condition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <select class="form-control" asp-for="Location" asp-items="@Model.Locations"></select>
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input class="subbtn" style="margin : 0 auto; margin-top: 20px; margin-bottom: 20px" type="submit" value="Create"/>
+            </div>
+            
+            <button class="subbtn" onclick="location.href='@Url.Action("Index", "Dashboard")'">Go back</button>
+        </form>
+        
+    </div>
+
+</div>
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

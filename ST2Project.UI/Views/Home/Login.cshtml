@@ -1,0 +1,48 @@
+﻿@model ST2Project.UI.Models.UserModel
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+    <div class="img">
+			<img src="~/images/main_image.svg">
+	</div>
+<div class="row"> 
+    <div class="col-md-4">
+        <form asp-action="LoginUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <img src="~/images/avatar_image.svg">
+            <h2>Welcome</h2>
+            <p style="color: red">@ViewBag.Error</p>
+            <div class="form-group">
+                <label asp-for="Username" class="control-label"></label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" type="password"/>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="fpass">
+                <a class="pass" asp-controller="Login" asp-action="Register">Forgot password?</a>
+            </div>
+                
+            <input type="submit" value="Login" class="subbtn" />
+            <a class="nav-link" asp-controller="Home" asp-action="Register">Don't have an account yet? <br><span>Register now!</span></a>
+        </form>   
+    </div>  
+</div>
+</div>
+</body>
+</html>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

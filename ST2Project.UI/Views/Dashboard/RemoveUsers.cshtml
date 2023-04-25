@@ -1,0 +1,71 @@
+﻿@model ST2Project.UI.Models.UserModel;
+
+<html>
+<body>
+    <div class="lmenu">
+        <div class="avatar">
+            <img src="~/images/avatar_image.svg" />
+        </div>
+        <div class="fullname">
+            <p>
+                @ViewData["UserData"]
+            </p>
+        </div>
+        <center>
+        <form asp-controller="Dashboard" asp-action="Index" style="width:300px; border-radius: 5px;">
+            <p>
+        <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+            </p>
+        </form>
+        </center>
+    <button class="subbtn" onclick="location.href='@Url.Action("CreateOffer", "Dashboard")'">Make your own offer</button>
+    <button class="subbtn" onclick="location.href='@Url.Action("ShowUserOffers", "Dashboard")'">Show your offers</button>
+    <button class="subbtn" onclick="location.href='@Url.Action("Index", "Dashboard")'">Show all offers</button>
+    <button class="subbtn" onclick="location.href='@Url.Action("SaveToFile", "Dashboard")'">Save offers to file</button>
+        @if (ViewBag.IsAdmin)
+        {
+         <button class="subbtn" onclick="location.href='@Url.Action("RemoveUsers", "Dashboard")'" style="margin-top: 300px">Remove Users</button>
+        }
+    <button class="subbtn" onclick="location.href='@Url.Action("Logout", "Dashboard")'" style="margin-top: 300px">Logout</button>
+    </div>
+    <div class="pmenu">
+    <div class="title">
+    <p>Announcements</p>
+    </div>
+
+	<table class="fixed_header">
+    <thead>
+        <tr style="width: 500px;">
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Działania</th>    
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in ViewData["Users"] as List<UserModel>) {
+                           <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastName)
+                                </td>
+                                <td>@Html.DisplayFor(modelItem => item.Username)</td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Email)
+                                </td>
+                                    <td>
+                                        <button style="width: 40px;"class="subbtn" onclick="location.href='@Url.Action("RemoveUserExecute", "Dashboard", new {value = item.Id})'">X</button>
+                                    </td>
+    
+                            </tr>             
+                    }
+    </tbody>
+    </table>     
+    </div>		
+</body>
+</html>

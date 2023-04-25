@@ -1,0 +1,53 @@
+﻿@model ST2Project.UI.Models.OfferModel;
+
+<html>
+<body>
+    <div class="lmenu">
+        <div class="avatar">
+            <img src="~/images/avatar_image.svg" />
+        </div>
+        <div class="fullname">
+            <p>
+                @ViewData["UserData"]
+            </p>
+        </div>
+
+    <button class="subbtn" id ="subbtn1" onclick="location.href='@Url.Action("CreateOffer", "Dashboard")'">Make your own offer</button>
+    <button class="subbtn" >Logout</button>
+    </div>
+    <div class="pmenu">
+    <div class="title">
+    <p>Ogłoszenia</p>
+    </div>
+
+	<table class="fixed_header">
+    <thead>
+        <tr>
+            <th>Tytuł</th>
+            <th>Opis</th>
+            <th>Cena</th>
+            <th>Stan</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in ViewData["Offers"] as List<OfferModel>) {
+                           <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Price)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Condition)
+                                </td>             
+                            </tr>             
+                    }
+    </tbody>
+    </table>
+    </div>		
+</body>
+</html>

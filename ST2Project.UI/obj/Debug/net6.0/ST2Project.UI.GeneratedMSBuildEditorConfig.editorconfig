@@ -1,0 +1,64 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ST2Project.UI
+build_property.RootNamespace = ST2Project.UI
+build_property.ProjectDir = F:\SzkolenieTechniczne2\Projekt\ST2Project\ST2Project.UI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = F:\SzkolenieTechniczne2\Projekt\ST2Project\ST2Project.UI
+build_property._RazorSourceGeneratorDebug = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Dashboard/CreateOffer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENyZWF0ZU9mZmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Dashboard/EditOffer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRPZmZlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Dashboard/Panel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFBhbmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Dashboard/RemoveUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFJlbW92ZVVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Dashboard/UserOffers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXFVzZXJPZmZlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Home/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/SzkolenieTechniczne2/Projekt/ST2Project/ST2Project.UI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-nd0no06kqt

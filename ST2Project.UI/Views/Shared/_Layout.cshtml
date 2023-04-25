@@ -1,0 +1,39 @@
+﻿@using ST2Project.UI.Session
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - buyLocally</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+    <link href="~/css/dashboard_style.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                @if(SessionService._isLoggedIn)
+                {
+                    <a class="navbar-brand" asp-area="" asp-controller="Dashboard" asp-action="Index">adLocally</a>
+                }
+                else
+                {
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">adLocally</a>
+                }
+
+            </div>
+        </nav>
+    </header>
+            @RenderBody()
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

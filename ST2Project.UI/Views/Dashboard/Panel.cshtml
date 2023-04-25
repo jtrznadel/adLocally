@@ -1,0 +1,93 @@
+﻿@model ST2Project.UI.Models.OfferModel;
+
+<html>
+<body>
+    <div class="lmenu">
+        <div class="avatar">
+            <img src="~/images/avatar_image.svg" />
+        </div>
+        <div class="fullname">
+            <p>
+                @ViewData["UserData"]
+            </p>
+        </div>
+        <center>
+        <form asp-controller="Dashboard" asp-action="Index" style="width:300px; border-radius: 5px;">
+            <p>
+        <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+            </p>
+        </form>
+        </center>
+    <button class="subbtn" onclick="location.href='@Url.Action("CreateOffer", "Dashboard")'">Make your own offer</button>
+    <button class="subbtn" onclick="location.href='@Url.Action("ShowUserOffers", "Dashboard")'">Show your offers</button>
+    <button class="subbtn" onclick="location.href='@Url.Action("Index", "Dashboard")'">Show all offers</button>
+    <button class="subbtn" onclick="location.href='@Url.Action("SaveToFile", "Dashboard")'">Save offers to file</button>
+        @if (ViewBag.IsAdmin)
+        {
+         <button class="subbtn" onclick="location.href='@Url.Action("RemoveUsers", "Dashboard")'">Remove Users</button>
+        }
+    <button class="subbtn" onclick="location.href='@Url.Action("Logout", "Dashboard")'" style="margin-top: 250px">Logout</button>
+    </div>
+    <div class="pmenu">
+    <div class="title">
+    <p>Announcements</p>
+    </div>
+
+	<table class="fixed_header">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Price</th>
+            <th>Location</th>
+            <th>Condition</th>
+                    @if (ViewBag.IsOwn || ViewBag.IsAdmin)
+                    {
+                        <th style="width: 120px;">Działania</th>
+                    }      
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in ViewData["Offers"] as List<OfferModel>) {
+                           <tr>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+
+                              @if(item.Price == 0){
+                                <td>For free</td>
+                                }
+                              else
+                                {
+                                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                                }
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Location)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Condition)
+                                </td>
+                                
+                                @if(ViewBag.IsOwn || ViewBag.IsAdmin){
+                                    <td>
+                                        <button style="width: 40px;"class="subbtn" onclick="location.href='@Url.Action("RemoveOffer", "Dashboard", new {value = item.OfferId})'">X</button>
+                            </td>
+                                if (ViewBag.IsOwn)
+                                {
+                                    <td>
+                                        <button  style="width: 40px;" class="subbtn" onclick="location.href='@Url.Action("EditOffer", "Dashboard", new {value = item.OfferId})'">Edit</button>
+                                    </td>
+                                }
+                        }
+                            </tr>             
+                    }
+    </tbody>
+    </table>     
+    </div>		
+</body>
+</html>
